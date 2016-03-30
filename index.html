@@ -1,45 +1,255 @@
-<title>Project Weather-U::Main Page</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ 
+    <title>Project Weather-U::Main Page</title>
 
     <!-- css/js -->
       <link href="css/main.css" rel="stylesheet">
 	  <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
-      <script src="semantic/semantic.min.js"></script>
+	  <link rel="stylesheet" href="css/flickity.css" media="screen">
+	  <script src="semantic/semantic.min.js"></script>
+	  <script src="js/jquery.js"></script>
+	  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	  <script src="js/jquery-ui.min.js"></script>
+	  <script src="js/flickity.pkgd.min.js"></script>
+	  <script src="js/jquery-ui.js"></script>
+	  <script src="jquery.ui.touch-punch.min.js"></script>
 	  <script src="js/script.js"></script>
+	  
+
+	  
+  </head>  
 	
   <body>
  <!-- logo and such -->
  
  <!-- body of text, images, videos -->
- <div class="ui fluid container" id = "logo">
- <img class="ui centered image"  src="images/logo.png"/>
+ <div class="ui fluid stackable container" id = "logo">
+ <img class="ui centered stackable image" src="images/logo.png"/>
 </div>
 <!-- links -->
-<div class="ui large grey inverted centered stackable menu" id="menu_1">
+<div class="ui grey inverted centered attached stackable menu" id="menu_1">
   <a class = "active item">Home</a>
   <a class = "item">Journey Map</a>
   <a class = "item">Planner</a>
-  <div class="right menu">
-	<div class="item">
-		<div class="ui vertical animated dark blue inverted button" tabindex="0">
+  <!-- <a class = "item">Connect</a> -->
+  
+	<div class="right item">
+		<div class="ui vertical animated dark blue inverted small button" tabindex="0">
 			<div class="visible content">Login</div>
 			<div class="hidden content">Here</div>
-		</div>
-    <div class="item">
-	    <div class="ui vertical animated dark blue inverted button" tabindex="0">
+	    </div>
+    <div class="right item">
+	    <div class="ui vertical animated dark blue inverted small button" tabindex="0">
 			<div class="visible content">Sign-Up</div>
 			<div class="hidden content">Here</div>
 		</div>	
-      </div>
-    </div>
+    
+  </div>
   </div>	
 </div>
 <!-- rest of body -->
+<div class="ui divider" style="margin-top: 40px; margin-bottom: 40px;" ></div>
+<div class="ui fluid container">
+	<div class="ui center container" id="c1">
+	  <div class="ui four column doubling stackable grid container"> 
+	    <div class="column" id="img_1">
+		  <img class="ui stackable medium centered image" src="images/cloudy_icon.png"/>
+		  <div class="ui attached bottom button btn">Cloudy Weather</div>
+		    <div class="ui form drop" style="text-align: center;">
+			    <div class="grouped fields">
+                    <label><h3>How Cloudy?<h3/></label>
+                 <div class="field">
+             <div class="ui radio checkbox">
+         <input name="cloudy" checked="checked" type="radio">
+        <label>No Clouds</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input name="cloudy"  type="radio">
+        <label>A little Clouds</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input name="cloudy"  type="radio">
+        <label>Some Clouds</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input name="cloudy" type="radio">
+        <label>A lot of Clouds</label>
+      </div>
+    </div>
+	</div>
+	</div>
+	</div>
+  
+				<!-- <p>
+                 <label for="amt_1">Severity:</label>
+                 <input type="text" id="amt_1" readonly style="border:0; font-weight:bold;">
+              </p>
+			  <div id="slider_1"></div> -->
+			
+		
+		
+		  
+		<div class="column" id="img_2">
+		  <img class="ui stackable medium centered image" src="images/rain_icon.png"/>
+		  <div class="ui attached bottom button btn" >Rainy Weather</div>
+		   <div class="ui form drop" style="text-align: center;">
+			    <div class="grouped fields">
+                    <label><h3>How much Rain?<h3/></label>
+                 <div class="field">
+             <div class="ui radio checkbox">
+         <input name="rainy" checked="checked" type="radio">
+        <label>No Rain</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input name="rainy" type="radio">
+        <label>A little Rain</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input name="rainy" type="radio">
+        <label>Some Rain</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input name="rainy" type="radio">
+        <label>A lot of Rain</label>
+      </div>
+    </div>
+	</div>
+	</div>
+	</div>
+				<!-- <p>
+                 <label for="amt_2">Severity:</label>
+                 <input type="text" id="amt_2" readonly style="border:0; font-weight:bold;">
+              </p>
+			  <div id="slider_2"></div> -->
+		
+		
+		<div class="column" id="img_3">
+		  <img class="ui stackable medium centered image" src="images/sunny_icon.png"/>
+		  <div class="ui attached bottom button btn" >Sunny Weather</div>
+		    		   <div class="ui form drop" style="text-align: center;">
+			    <div class="grouped fields">
+                    <label><h3>How much Sunshine?<h3/></label>
+                 <div class="field">
+             <div class="ui radio checkbox">
+         <input name="sunshine" checked="checked" type="radio">
+        <label>No Sunshine</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input name="sunshine" type="radio">
+        <label>A little Sunshine</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input name="sunshine" type="radio">
+        <label>Some Sunshine</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input name="sunshine" type="radio">
+        <label>A lot of Sunshine</label>
+      </div>
+    </div>
+	</div>
+	</div>
+	</div>
+					<!-- 	<p>
+                 <label for="amt_3">Severity:</label>
+                 <input type="text" id="amt_3" readonly style="border:0; font-weight:bold;">
+              </p>
+			  <div id="slider_3"></div> -->
+		
+		
+		<div class="column" id="img_4">
+		  <img class="ui stackable medium centered image" src="images/wind_icon.png"/>
+		  <div class="ui attached bottom button btn" >Windy Weather</div>
+		    		   <div class="ui form drop" style="text-align: center;">
+			    <div class="grouped fields">
+                    <label><h3>How Windy?<h3/></label>
+                 <div class="field">
+             <div class="ui radio checkbox">
+         <input name="windy" checked="checked" type="radio">
+        <label>No Wind</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input name="windy" type="radio">
+        <label>A little Windy</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input name="windy" type="radio">
+        <label>Some Wind</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input name="windy" type="radio">
+        <label>A lot of Wind</label>
+      </div>
+    </div>
+	</div>
+	</div>
+	</div>
+			  <!-- <p>
+                 <label for="amt_4">Severity:</label>
+                 <input type="text" id="amt_4" readonly style="border:0; font-weight:bold;">
+              </p>
+			  <div id="slider_4"></div> -->
+	
+ 	  </div>
+	
+	</div>
+	 </div>
+	
+	</div>
+	 </div>
+	
+	</div>
+	
+	
+<div class="ui divider" style="margin-top: 40px;"></div>	
 
+<div class="ui stackable center container" id="c2">
+<div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true }'>
+  <div class="gallery-cell"><img class="ui stackable large centered image" src="images/qe2.jpg"/></div>
+  <div class="gallery-cell"><img class="ui stackable large centered image" src="images/qe2.jpg"/></div>
+  <div class="gallery-cell"><img class="ui stackable large centered image" src="images/qe2.jpg"/></div>
+  <div class="gallery-cell"><img class="ui stackable large centered image" src="images/qe2.jpg"/></div>
+  <div class="gallery-cell"><img class="ui stackable large centered image" src="images/qe2.jpg"/></div>
+</div>
+<!-- QEII Park Image from http://www.wellingtonnz.com/screen/locations-directory/queen-elizabeth-park/
+Other Images are self-made
+ -->
+</div>
+
+
+</div>
 
        <!-- js inline -->
 	   <script>
 			
 		</script>
   </body>
+</html>
 </html>
 
