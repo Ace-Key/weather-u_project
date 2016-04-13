@@ -14,13 +14,18 @@ h3 {
 	
 }
 #menu_1{
-	font-size: 20pt;
+	font-size: 16pt;
 	
 }
 #c1 {
 	background-color: #263b3e;
 }
 #c2 {
+	background-color: #7fcc4a;
+	height: 400px;
+	margin-bottom: 40px;
+}
+#c3 {
 	background-color: #7fcc4a;
 	height: 200px;
 	margin-bottom: 40px;
@@ -56,10 +61,9 @@ h3 {
   box-sizing: border-box;
 }
 
-body { font-family: sans-serif; }
 
 .gallery {
-  background: #EEE;
+  background: #7fcc4a;
 }
 
 .gallery-cell {
@@ -70,12 +74,3 @@ body { font-family: sans-serif; }
   counter-increment: gallery-cell;
 }
 
-/* cell number */
-/* .gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
-} */
