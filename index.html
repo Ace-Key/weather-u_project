@@ -1,24 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project Weather-U::Main Page</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Weather-U::Main Page</title>
 	
 
-    <!-- css/js -->
-      <link rel="stylesheet" href="css/main.css">
-	  <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
-	  <link rel="stylesheet" href="css/jquery-ui.css">
-	  <link rel="stylesheet" href="css/flickity.css" media="screen">
-	  <script src="js/script.js"></script>
-	  <script src="semantic/semantic.min.js"></script>
-	  <script src="js/jquery.ui.touch-punch.min.js"></script>
-	  <script src="js/jquery-ui.min.js"></script>
-	  <script src="js/flickity.pkgd.min.js"></script>
-	  
-	  
-  </head>  
-	
+  <!-- css/js -->
+  <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
+  <script src="js/script.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <!-- <script src="js/jquery-ui.js"></script> -->
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+  <!-- <script src="js/jquery.ui.touch-punch.js"></script> -->
+  <script src="semantic/semantic.min.js"></script>
+  </head>
   <body>
  <!-- logo and such -->
  
@@ -27,7 +30,7 @@
  <img class="ui centered image" src="images/logo.png"/>
 </div>
 <!-- links -->
-<div class="ui fluid grey inverted menu" id="menu_1">
+<div class="ui fluid grey inverted secondary pointing menu" id="menu_1">
   <a class = "active item">Home</a>
   <a class = "item">Journey Map</a>
   <a class = "item">Planner</a>
@@ -37,7 +40,7 @@
 			<div class="hidden content">Here</div>
 	    </div>
     <div class="right item">
-	    <div class="ui vertical animated blue inverted small button" tabindex="0">
+	    <div class="ui horizontal animated blue inverted small button" tabindex="0">
 			<div class="visible content">Sign-Up</div>
 			<div class="hidden content">Here</div>
 		</div>	
@@ -46,7 +49,7 @@
   </div>	
 </div>
 <!-- rest of body -->
-<div class="ui divider" style="margin-top: 40px; margin-bottom: 40px;" ></div>
+<div class="ui divider" style="margin-top: 40px;" ></div>
 
 <div class="ui fluid container">
 	<div class="ui center container" id="c1">
@@ -85,6 +88,7 @@
     </div>
 	</div>
 	</div>
+	<div class="ui attached bottom button" id="s1">Save Selection</div>
 	</div>
   
 <!-- rainy weather condition -->						  
@@ -120,6 +124,7 @@
     </div>
 	</div>
 	</div>
+	<div class="ui attached bottom button" id="s2">Save Selection</div>
 	</div>
 				
 		
@@ -156,6 +161,7 @@
     </div>
 	</div>
 	</div>
+	<div class="ui attached bottom button" id="s3">Save Selection</div>
 	</div>
 				
 		
@@ -192,7 +198,9 @@
     </div>
 	</div>
 	</div>
+	<div class="ui attached bottom button" id="s4">Save Selection</div>
 	</div>
+	
 			  	
  	  </div>
 	
@@ -206,17 +214,16 @@
 	
 <div class="ui divider" style="margin-top: 40px;"></div>
 <div class="ui stackable center container" id="c2"></div>
+<div class="ui stackable center container" id="cE"></div>
 	
 <div class="ui divider" style="margin-top: 40px; margin-bottom: 40px;"></div>	
 
 <div class="ui stackable center container" id="c3">
-<div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true }'>
-  <div class="gallery-cell"><img class="ui stackable large centered image" src="images/qe2.png"/></div>
-  <div class="gallery-cell"><img class="ui stackable large centered image" src="images/qe2.png"/></div>
-  <div class="gallery-cell"><img class="ui stackable large centered image" src="images/qe2.png"/></div>
-  <div class="gallery-cell"><img class="ui stackable large centered image" src="images/qe2.png"/></div>
-  <div class="gallery-cell"><img class="ui stackable large centered image" src="images/qe2.png"/></div>
-</div>
+
+ <img class="ui stackable large centered image" id="w_img" src="images/qe2.png"/>
+ 
+ </div>
+  
 <!-- QEII Park Image from http://www.wellingtonnz.com/screen/locations-directory/queen-elizabeth-park/
 Other Images are self-made
  -->
@@ -224,9 +231,7 @@ Other Images are self-made
 </div>
 
 
-       <!-- js inline -->
-	   <script>
-			
-		</script>
+       
+	    
   </body>
 </html>
