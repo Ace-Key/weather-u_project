@@ -25,9 +25,14 @@ h3 {
 	height: 400px;
 	margin-bottom: 40px;
 }
+#cE {
+	background-color: #263b3e;
+	height: 400px;
+	margin-bottom: 40px;
+}
 #c3 {
 	background-color: #7fcc4a;
-	height: 200px;
+	height: 400px;
 	margin-bottom: 40px;
 }
 .btn {
@@ -35,9 +40,8 @@ h3 {
 }
 .drop {
 	display: hidden;
-	border: solid 2px #7fcc4a;
 	height: 200px;
-	color: #ffffff;
+	font: #ffffff;
 }
 .slider {
 	
@@ -56,7 +60,7 @@ h3 {
 #img_4 {
 	
 }
-* {
+/* * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -67,10 +71,11 @@ h3 {
 }
 
 .gallery-cell {
-  width: 66%;
+  width: 100%;
   height: 300px;
   margin-right: 10px;
+  margin-left: 10px;
   background: #7fcc4a;
   counter-increment: gallery-cell;
-}
+} */
 
