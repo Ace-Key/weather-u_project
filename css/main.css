@@ -14,68 +14,66 @@ h3 {
 	
 }
 #menu_1{
-	font-size: 20pt;
+	font-size: 16pt;
 	
+}
+#w_img{
+	margin-left: auto;
+	margin-right: auto;
 }
 #c1 {
 	background-color: #263b3e;
 }
 #c2 {
 	background-color: #7fcc4a;
-	height: 200px;
+	height: 400px;
 	margin-bottom: 40px;
+}
+#cE {
+	background-color: #263b3e;
+	height: 400px;
+	margin-bottom: 40px;
+}
+#c3 {
+	background-color: #7fcc4a;
+	background-image: url("images/qe2.png");
+	height: 600px;
+	
+	margin-bottom: 40px;
+	
+}
+.cw {
+	font: 16pt;
+	color: #263b3e;
+	text-align: center;
+	text-transform: uppercase;
+	
 }
 .btn {
 	background-color: #52ffda;
 }
 .drop {
 	display: hidden;
-	border: solid 2px #7fcc4a;
 	height: 200px;
-	color: #ffffff;
-}
-.slider {
-	
-}
-#img_1{
-	
+	font: #ffffff;
 }
 
-#img_2{
-	
-}
-
-#img_3{
-	
-}
-#img_4 {
-	
-}
-* {
+/* * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-body { font-family: sans-serif; }
 
 .gallery {
-  background: #EEE;
+  background: #7fcc4a;
 }
 
 .gallery-cell {
-  width: 66%;
+  width: 100%;
   height: 300px;
   margin-right: 10px;
+  margin-left: 10px;
   background: #7fcc4a;
   counter-increment: gallery-cell;
-}
-
-/* cell number */
-/* .gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
 } */
+
