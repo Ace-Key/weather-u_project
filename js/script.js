@@ -7,7 +7,7 @@ $(document).ready(function(){
 	var btn = $('.btn');
 	var drop = $('.drop');
 	var cw = $('.cw'); 
-    var ce = $('#cE');
+        var ce = $('#cE');
 	var c2 = $('#c2');
 	
     	
@@ -75,7 +75,6 @@ $(document).ready(function(){
       html = '<h2 '+weather.code+'>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
       html += '<ul style="list-style-type: none; line-height: 1.5;"><li>'+weather.city+', '+weather.country+'</li>';
       html += '<li class="currently">'+weather.currently+'</li>';
-	  html += '<li class="currently">'+weather.currently+'</li>';
       html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
   
       cw.html(html);
