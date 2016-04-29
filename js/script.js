@@ -7,7 +7,7 @@ $(document).ready(function(){
 	var btn = $('.btn');
 	var drop = $('.drop');
 	var cw = $('.cw'); 
-        var ce = $('#cE');
+    var ce = $('#cE');
 	var c2 = $('#c2');
 	
     	
@@ -21,23 +21,29 @@ $(document).ready(function(){
 //light sensor api	
 	window.addEventListener('devicelight', function(event) {
 			
-       var val = event.value;		
+       var val = event.value;	
+       var dis;	   
        if (val < 50) {
          // dark or dim
-		  //ce.innerHTML = ('<p style="text-align: center; font-color: #fffff;">"seems like a dim or dark light"</p>');
-		  ce.html('<p style="color: #ffffff; font-size: 16pt;">Dark'+val+'</p>');
+		 /*  dis = '<h2>Dim or Dark</h2>';
+		  dis += '<p style="color: #ffffff; font-size: 16pt;">'+val+',lux</p>';
+		  ce.html(dis); */
+		  
+		  ce.html('<p style="color: #ffffff; text-align: center; font-size: 16pt;">It is Dark'+val+'</p>');
 		} 
 	   else {
 		 // bright or light
-		  //ce.innerHTML = ('<p style="text-align: center; font-color: #fffff;">"seems like a dim or dark light"</p>');
-		  ce.html('<p style="color: #ffffff; font-size: 16pt;">Bright'+val+'</p>');
+		  /* dis = '<h2>Bright or Light</h2>';
+		  dis += '<p style="color: #ffffff; font-size: 16pt;">'+val+',lux</p>';
+		  ce.html(dis); */
+		  ce.html('<p style="color: #ffffff; font-size: 16pt;">It is Bright'+val+'</p>');
 		}
      		
      console.log(val);
 	 
 	});
 //device orientation api	
-/*   window.addEventListener("devicemotion", handleMotionEvent, true);
+  
   function handleMotionEvent(event) {
 
     var x = event.accelerationIncludingGravity.x;
@@ -45,22 +51,23 @@ $(document).ready(function(){
     var z = event.accelerationIncludingGravity.z;
     var set;
     if(x>0 || x<0){
-		set = '<p style="font-size: 16pt; color: #ffffff; font-weight: ;">'+x+ 'ms/2''</p>';
-		c2.html(x);
+		
+		c2.html('<p style>x-axis movement'+x+'ms/2</p>');
 	}
     if(y>0 || y<0){
-		set = '<p style="font-size: 16pt; color: #ffffff; font-weight: ;">'+y+ 'ms/2''</p>';
-		c2.html(y);
+		
+		c2.html('<p style>y-axis movement:'+y+'ms/2</p>');
 	}	
    if(z>0 || z<0){
-	   set = '<p style="font-size: 16pt; color: #ffffff; font-weight: ;">'+z+ 'ms/2''</p>';
-		c2.html(z);
+	   
+		c2.html('<p style>z-axis movement'+z+'ms/2</p>');
 	}		
     
 	console.log('Rotation on the x-axis:'+x+'ms/2');
 	console.log('Rotation on y-axis'+y+'ms/2');
 	console.log('Rotation on z-axis'+z+'ms/2');
-} */
+	window.addEventListener("devicemotion", handleMotionEvent, true);
+  }
 
 
 
@@ -75,7 +82,7 @@ $(document).ready(function(){
       html = '<h2 '+weather.code+'>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
       html += '<ul style="list-style-type: none; line-height: 1.5;"><li>'+weather.city+', '+weather.country+'</li>';
       html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
+	  html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
   
       cw.html(html);
     },
