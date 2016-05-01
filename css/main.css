@@ -10,12 +10,12 @@ h2, h3 {
 	line-height: 1.5;
 }
 
-#li1, #li2, #geo1, #geo2, #geo3, #c1, #c2, #c3{
+#li1, #li2, #o1, #o2, #o3{
 	color: #ffffff;
 	line-height: 1.5;
 	
 }
- #wc1, #wc2, #wc3, #wc4 {
+ #wc1, #wc2, #wc3, #wc4, #geo1, #geo2, #geo3 {
 	color: #263b3e;
 	line-height: 1.15;
 	
