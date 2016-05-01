@@ -97,9 +97,9 @@ function handleMotionEvent(event) {
     var z1 = event.accelerationIncludingGravity.z;
 	
  	
-    o1.html("Moving Left/Right by: "+x+" ms/2");	
-	o2.html("Moving Forward/Back by: "+y+" ms/2");
-	o3.html("Moving Up or Down by: "+z+" ms/2");
+    o1.html("Moving Left/Right by: "+x1+" ms/2");	
+	o2.html("Moving Forward/Back by: "+y1+" ms/2");
+	o3.html("Moving Up or Down by: "+z1+" ms/2");
     
 	/* console.log('Rotation on the x-axis:'+x+'ms/2');
 	console.log('Rotation on y-axis'+y+'ms/2');
