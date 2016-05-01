@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Project Weather-U::Main Page</title>
-	
+
     <!-- css/js -->
   <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
@@ -14,11 +14,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   
   <script src="js/script.js"></script>
+  <script src="js/jquery.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <!-- <script src="js/jquery-ui.js"></script> -->
   <script src="js/jquery.ui.touch-punch.min.js"></script>
-  <!-- <script src="js/jquery.ui.touch-punch.js"></script> -->
   <script src="semantic/semantic.min.js"></script>
   <script src="js/jquery.simpleWeather.min.js"></script>
   </head>
@@ -213,17 +213,43 @@
 	</div>
 	
 <div class="ui divider" style="margin-top: 40px;"></div>
-<div class="ui stackable center container" id="c2"></div>
-<div class="ui stackable center container" id="cE"></div>
-	
+<div class="ui stackable center container" id="c2">
+<h2>Geolocation Setting</h2>
+<p id = "geo1"></p>
+<p id = "geo2"></p>
+<p id = "geo3"></p>
+</div>
+
+<div class="ui divider" style="margin-top: 40px; margin-bottom: 40px;"></div>
+
+<div class="ui stackable center container" id="cE">
+<h2>Environment Lighting</h2>
+<p id = "li1"></p>
+<p id = "li2"></p>
+</div>
+
 <div class="ui divider" style="margin-top: 40px; margin-bottom: 40px;"></div>	
 
 
 <div class="ui stackable center container" id="c3">
-<div class="cw"></div>
-<img class="ui stackable large centered image" id="w_img" src="images/qe2.png"/>
+<h2>Current Weather</h2>
+<p id = "wc1" style = "font-weight: 900; color: #ffffff;"></p>
+<p id = "wc2"></p>
+<p id = "wc3"></p>
+<p id = "wc4"></p>
+<img class="ui large centered stackable image" id="w_img" src="images/qe2.png"/>
 
- </div>
+<!-- <img class="ui stackable large centered stackable image" id="w_img" src="images/qe2.png"/> -->
+
+</div>
+<div class="ui divider" style="margin-top: 40px; margin-bottom: 40px;"></div>	
+
+<div class="ui stackable center container" id="c4">
+<h2>Device Orientation</h2>
+<p id = "o1"></p>
+<p id = "o2"></p>
+<p id = "o3"></p>
+</div>	
   
 <!-- QEII Park Image from http://www.wellingtonnz.com/screen/locations-directory/queen-elizabeth-park/
 Other Images are self-made
