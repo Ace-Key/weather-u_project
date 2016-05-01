@@ -35,12 +35,12 @@
   <a class = "item">Journey Map</a>
   <a class = "item">Planner</a>
   <div class="right item">
-		<div class="ui vertical animated blue inverted small button" tabindex="0">
+		<div class="ui vertical animated blue inverted small button" id = "log" tabindex="0">
 			<div class="visible content">Login</div>
 			<div class="hidden content">Here</div>
 	    </div>
     <div class="right item">
-	    <div class="ui horizontal animated blue inverted small button" tabindex="0">
+	    <div class="ui horizontal animated blue inverted small button" id = "sign" tabindex="0">
 			<div class="visible content">Sign-Up</div>
 			<div class="hidden content">Here</div>
 		</div>	
@@ -48,6 +48,65 @@
   </div>
   </div>	
 </div>
+
+<!-- modal login -->
+<div class="ui large modal" id="logm">
+  <i class="close icon"></i>
+  <div class="header">
+    Login In
+  </div>
+  <div class="ui large input focus">
+  <i class= "user icon"></i><input placeholder="ID..." type="text">
+</div> 
+<br />
+ <div class="ui large input">
+ <i class="lock icon"></i> <input placeholder="Password..." type="text">
+</div>
+
+<p style="margin-left: 40px; margin-top: 20px;">Forgot Your Username and/or Password?</p>
+<a style="color: #263b3e; font-weight: 900; margin-left: 40px;" href="">Click Here</a>
+ <div class="actions">
+    <div class="ui large black button">Go Back</div>
+    <div type = "submit" class="ui large blue button">Login</div>
+  </div>
+</div>
+
+<!-- modal sign-up -->
+<div class="ui large modal" id="signm">
+  <i class="close icon"></i>
+  <div class="header">
+    Sign Up
+  </div>
+  <div class="ui large input focus">
+  <i class= "users icon"></i><input placeholder="Name..." type="text">
+</div>
+<br />
+ <div class="ui large input">
+  <i class= "home icon"></i><input placeholder="Address..." type="text">
+</div>
+<br />
+ <div class="ui large input">
+  <i class= "at icon"></i><input placeholder="Email Address..." type="text">
+</div>
+<br />
+ <div class="ui large input">
+  <i class= "user icon"></i><input placeholder="Intended Username..." type="text">
+</div>
+<br />
+ <div class="ui large input">
+  <i class= "lock icon"></i><input placeholder="Intended Password..." type="text">
+</div>
+<br />
+  <div class="ui large input">
+  <i class= "lock icon"></i><input placeholder="Re-type Password..." type="text">
+</div>   
+  <br />
+  <div class="actions">
+    <div class="ui grey button">Go Back</div>
+    <div type = "submit" class="ui green button">Sign Up</div>
+  </div>
+</div>
+
 <!-- rest of body -->
 <div class="ui divider" style="margin-top: 40px;" ></div>
 
