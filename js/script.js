@@ -87,7 +87,7 @@ navigator.geolocation.getCurrentPosition(success, error, options);
 	
 //device orientation api	
   
-function handleMotionEvent(event) {
+/* function handleMotionEvent(event) {
 
     var x = event.acceleration.x;
     var y = event.acceleration.y;
@@ -100,12 +100,21 @@ function handleMotionEvent(event) {
     o1.html("Moving Left/Right by: "+x1+" ms/2");	
 	o2.html("Moving Forward/Back by: "+y1+" ms/2");
 	o3.html("Moving Up or Down by: "+z1+" ms/2");
-    
-	/* console.log('Rotation on the x-axis:'+x+'ms/2');
-	console.log('Rotation on y-axis'+y+'ms/2');
-	console.log('Rotation on z-axis'+z+'ms/2'); */
+
 	window.addEventListener("devicemotion", handleMotionEvent, true);
-  }
+  }*/
+window.addEventListener('devicemotion', function(event) {
+    var x = event.acceleration.x;
+    var y = event.acceleration.y;
+    var z = event.acceleration.z;
+	var x1 = event.accelerationIncludingGravity.x;
+    var y1 = event.accelerationIncludingGravity.y;
+    var z1 = event.accelerationIncludingGravity.z;
+	
+    o1.html("Moving Left/Right by: "+x1+" ms/2");	
+	o2.html("Moving Forward/Back by: "+y1+" ms/2");
+	o3.html("Moving Up or Down by: "+z1+" ms/2");
+});
 
 //weather api
 	
