@@ -1,19 +1,16 @@
 $(document).ready(function(){
-	var w1 = $('#img_1');
-	var w2 = $('#img_2');
-	var w3 = $('#img_3');
-	var w4 = $('#img_4');
-	var cur = $('#w_img');
-	var btn = $('.btn');
-	var drop = $('.drop');
-	var cw = $('.cw'); 
-    var ce = $('#cE');
-	var c2 = $('#c2');
+	var w1 = $('#img_1'); var w2 = $('#img_2');	var w3 = $('#img_3'); var w4 = $('#img_4');
+	var cur = $('#w_img');var btn = $('.btn');var drop = $('.drop');var cw = $('#cw');
+	var li1 =$('#li1');	var li2 =$('#li2');
+    var geo1 = $('#geo1');var geo2 = $('#geo2');var geo3 = $('#geo3');
+	var o1 = $('#o1'); var o2 = $('#o2');
+	var wc1 = $('#wc1');var wc2 = $('#wc2');var wc3 = $('#wc3');var wc4 = $('#wc4');
+    var ce = $('#cE');	var c2 = $('#c2');	var c4 = $('#c4');
 	
     	
-	/* var carousel=$(".main-carousel"); */
+
 	cur.resizable().draggable();
-	
+//slide function for selectors	
 	btn.click(function(){
         drop.slideToggle("slow");
 				
@@ -25,23 +22,40 @@ $(document).ready(function(){
        var dis;	   
        if (val < 50) {
          // dark or dim
-		 /*  dis = '<h2>Dim or Dark</h2>';
-		  dis += '<p style="color: #ffffff; font-size: 16pt;">'+val+',lux</p>';
-		  ce.html(dis); */
-		  
-		  ce.html('<p style="color: #ffffff; text-align: center; font-size: 16pt;">It is Dark'+val+'</p>');
+		  li1.html("Your in a dim or dark lighting environment:");
+		  li2.html(val + " lux");
 		} 
 	   else {
 		 // bright or light
-		  /* dis = '<h2>Bright or Light</h2>';
-		  dis += '<p style="color: #ffffff; font-size: 16pt;">'+val+',lux</p>';
-		  ce.html(dis); */
-		  ce.html('<p style="color: #ffffff; font-size: 16pt;">It is Bright'+val+'</p>');
+		  li1.html("Your in a bright lighting environment:");
+		  li2.html(val+ " lux");
 		}
      		
-     console.log(val);
-	 
+    	 
 	});
+	
+//geolocation api
+
+var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function success(pos) {
+  var crd = pos.coords;
+  geo1.html("Latitude: " + crd.latitude);
+  geo2.html("Longitude: " + crd.longitude);
+  geo3.html("Accuracy of this is about " + crd.accuracy + " metres");
+
+};
+
+function error(err) {
+  console.warn('ERROR(' + err.code + '): ' + err.message);
+};
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+	
 //device orientation api	
   
   function handleMotionEvent(event) {
@@ -49,23 +63,14 @@ $(document).ready(function(){
     var x = event.accelerationIncludingGravity.x;
     var y = event.accelerationIncludingGravity.y;
     var z = event.accelerationIncludingGravity.z;
-    var set;
-    if(x>0 || x<0){
-		
-		c2.html('<p style>x-axis movement'+x+'ms/2</p>');
-	}
-    if(y>0 || y<0){
-		
-		c2.html('<p style>y-axis movement:'+y+'ms/2</p>');
-	}	
-   if(z>0 || z<0){
-	   
-		c2.html('<p style>z-axis movement'+z+'ms/2</p>');
-	}		
+ 	
+    o1.html("Moving Left/Right by: "+x+" ms/2");	
+	o2.html("Moving Forward/Back by: "+y+" ms/2");
+	o3.html("Moving Up or Down by: "+z+" ms/2");
     
-	console.log('Rotation on the x-axis:'+x+'ms/2');
+	/* console.log('Rotation on the x-axis:'+x+'ms/2');
 	console.log('Rotation on y-axis'+y+'ms/2');
-	console.log('Rotation on z-axis'+z+'ms/2');
+	console.log('Rotation on z-axis'+z+'ms/2'); */
 	window.addEventListener("devicemotion", handleMotionEvent, true);
   }
 
@@ -79,12 +84,16 @@ $(document).ready(function(){
     woeid: '',
     unit: 'c',
     success: function(weather) {
-      html = '<h2 '+weather.code+'>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+  /*     html = '<h2 '+weather.code+'>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
       html += '<ul style="list-style-type: none; line-height: 1.5;"><li>'+weather.city+', '+weather.country+'</li>';
       html += '<li class="currently">'+weather.currently+'</li>';
-	  html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
-  
-      cw.html(html);
+	  html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>'; */
+	  
+      wc1.html(+weather.temp+'&deg;'+weather.units.temp);
+      wc2.html("Location: " +weather.city+', '+weather.country);
+      wc3.html("Current Weather: "+weather.currently);
+	  wc4.html("Wind: " +weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed);
+      //cw.html(html);
     },
     error: function(error) {
       cw.html('<p>'+error+'</p>');
