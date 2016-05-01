@@ -100,9 +100,9 @@ navigator.geolocation.getCurrentPosition(success, error, options);
     o1.html("Moving Left/Right by: "+x1+" ms/2");	
 	o2.html("Moving Forward/Back by: "+y1+" ms/2");
 	o3.html("Moving Up or Down by: "+z1+" ms/2");
-
+    
 	window.addEventListener("devicemotion", handleMotionEvent, true);
-  }*/
+  }; */
 window.addEventListener('devicemotion', function(event) {
     var x = event.acceleration.x;
     var y = event.acceleration.y;
@@ -114,7 +114,7 @@ window.addEventListener('devicemotion', function(event) {
     o1.html("Moving Left/Right by: "+x1+" ms/2");	
 	o2.html("Moving Forward/Back by: "+y1+" ms/2");
 	o3.html("Moving Up or Down by: "+z1+" ms/2");
-});
+});  
 
 //weather api
 	
